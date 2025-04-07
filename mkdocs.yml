@@ -1,0 +1,29 @@
+site_name: "VLSIアーキテクチャ 2025"
+site_url: https://mydomain.org/mysite
+
+theme:
+  name: material
+  icon:
+    logo: material/memory
+  palette:
+    - scheme: default
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: "ダークモードに切替"
+    - scheme: slate
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: "通常モードに切替"
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
