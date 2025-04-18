@@ -219,7 +219,7 @@ function createHeaderRow() {
     ['rd', 'デスティネーション'],
     ['rs1', 'ソース1'],
     ['rs2', 'ソース2'],
-    ['imm', '即値']
+    ['imm', '即値 (10進数で入力)']
   ];
 
   labels.forEach(label => {
