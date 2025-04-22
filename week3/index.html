@@ -2852,7 +2852,7 @@ assertを使うと良いと思います。</p>
 <p>おさらいしておくと、こうしたセルの論理動作やタイミングをモデリングしたデータが<strong>.db</strong>ファイルとして整理されており、論理合成では、SystemVerilogによるRTL設計を、この.dbファイルの中に存在するセルを複数組み合わせた論理ゲートレベル設計へと変換していくのでした。</p>
 <div class="admonition tip">
 <p class="admonition-title">Process design kit (PDK)</p>
-<p>今回論理合成にLibertyファイル (.db) を利用するほか、スタンダードセルのレイアウトファイル (.gds) も見てみました。ライブラリこうした設計用データが集積されたものをPDKと呼びます。今回論理合成用に利用する<a href="https://eda.ncsu.edu/freepdk15/">15nm FinFETプロセス</a>のように、オープンなPDKが他にも存在します。たとえば、<a href="https://github.com/The-OpenROAD-Project/asap7">7nm FinFETプロセス, ASAP7</a>といったものが存在します。また、<a href="https://github.com/google/skywater-pdk">130nm CMOSプロセス, SKY130</a>は、オープンかつ、実際に製造可能なプロセスとなっています。こういったPDKを利用して論理合成や配置配線を実施し、RTL設計をVLSI化した際の電力、動作速度、面積といった値を見積もることができます。</p>
+<p>今回論理合成にLibertyファイル (.db) を利用するほか、スタンダードセルのレイアウトファイル (.gds) も見てみました。こうしたスタンダードセルライブラリをはじめ、特定の製造プロセスに向けたVLSI設計用データが集積されたものをPDKと呼びます。半導体製造企業が自社の製造プロセスの利用者向けに準備するもののほか、今回論理合成用に利用する<a href="https://eda.ncsu.edu/freepdk15/">15nm FinFETプロセス</a>のように、オープンなPDKも存在します。たとえば、<a href="https://github.com/The-OpenROAD-Project/asap7">7nm FinFETプロセス, ASAP7</a>といったものが存在します。これらは実際には存在しない製造プロセスを仮定して設計されたPredictiveなものです。他方、<a href="https://github.com/google/skywater-pdk">130nm CMOSプロセス, SKY130</a>は、オープンかつ、実際に製造可能なプロセスとなっています。こういったPDKを利用して論理合成や配置配線を実施し、RTL設計をVLSI化した際の電力、動作速度、面積といった値を見積もることができます。</p>
 </div>
 <h3 id="alu_1">ALUの論理合成</h3>
 <p>実際に、自分で記述してきたRTL設計を論理合成してみましょう。</p>
