@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/week4/">
+        <link rel="canonical" href="https://mydomain.org/mysite/rv32i/">
       
       
-        <link rel="prev" href="../week3/">
+        <link rel="prev" href="../riscv_assembler/">
       
       
-        <link rel="next" href="../week5/">
+        <link rel="next" href="../week1/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>第4回 プロセッサのVLSI実装 - VLSIアーキテクチャ 2025</title>
+        <title>RISC-V RV32I仕様メモ - VLSIアーキテクチャ 2025</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#4-vlsi" class="md-skip">
+        <a href="#risc-v-rv32i" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第4回 プロセッサのVLSI実装
+              RISC-V RV32I仕様メモ
             
           </span>
         </div>
@@ -270,10 +270,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../rv32i/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -283,6 +292,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -354,19 +364,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../week4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -376,7 +377,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -478,13 +478,248 @@
 
 
 
-<h1 id="4-vlsi">第4回 プロセッサのVLSI実装</h1>
-<div class="admonition abstract">
-<p class="admonition-title">本日の講義内容</p>
+<h1 id="risc-v-rv32i">RISC-V RV32I仕様メモ</h1>
+<figure>
+  <img alt="" src="../img/format.png" width="800" />
+  <figcaption>RV32I命令フォーマット。</figcaption>
+</figure>
 <ul>
-<li>公開をお待ちください</li>
+<li>以下で<code>rd</code>や<code>rs1</code>、<code>rs2</code>はそれぞれに格納された値 (参考ソースにおける<code>rs1_value</code>など) のこと</li>
 </ul>
-</div>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th><code>opcode[6:0]</code></th>
+<th>演算内容</th>
+<th>分岐先アドレス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADDI</td>
+<td>0010011</td>
+<td>rd = rs1 + imm</td>
+<td>×</td>
+</tr>
+<tr>
+<td>XORI</td>
+<td>0010011</td>
+<td>rd = rs1 ^ imm</td>
+<td>×</td>
+</tr>
+<tr>
+<td>ORI</td>
+<td>0010011</td>
+<td>rd = rs1 | imm</td>
+<td>×</td>
+</tr>
+<tr>
+<td>ANDI</td>
+<td>0010011</td>
+<td>rd = rs1 &amp; imm</td>
+<td>×</td>
+</tr>
+<tr>
+<td>ADD</td>
+<td>0110011</td>
+<td>rd = rs1 + rs2</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SUB</td>
+<td>0110011</td>
+<td>rd = rs1 - rs2</td>
+<td>×</td>
+</tr>
+<tr>
+<td>XOR</td>
+<td>0110011</td>
+<td>rd = rs1 ^ rs2</td>
+<td>×</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>0110011</td>
+<td>rd = rs1 | rs2</td>
+<td>×</td>
+</tr>
+<tr>
+<td>AND</td>
+<td>0110011</td>
+<td>rd = rs1 &amp; rs2</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SLTI</td>
+<td>0010011</td>
+<td>rd = (signed)rs1 &lt; imm</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SLTIU</td>
+<td>0010011</td>
+<td>rd = rs1 &lt; imm (unsigned)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SLT</td>
+<td>0110011</td>
+<td>rd = (signed)rs1 &lt; (signed)rs2</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SLTU</td>
+<td>0110011</td>
+<td>rd = rs1 &lt; rs2 (unsigned)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SLLI</td>
+<td>0010011</td>
+<td>rd = rs1 &lt;&lt; imm[4:0]</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SRLI</td>
+<td>0010011</td>
+<td>rd = rs1 &gt;&gt; imm[4:0]</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SRAI</td>
+<td>0010011</td>
+<td>rd = (signed)rs1 &gt;&gt;&gt; imm[4:0]</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SLL</td>
+<td>0110011</td>
+<td>rd = rs1 &lt;&lt; rs2[4:0]</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SRL</td>
+<td>0110011</td>
+<td>rd = rs1 &gt;&gt; rs2[4:0]</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SRA</td>
+<td>0110011</td>
+<td>rd = (signed)rs1 &gt;&gt;&gt; rs2[4:0]</td>
+<td>×</td>
+</tr>
+<tr>
+<td>LUI</td>
+<td>0110111</td>
+<td>rd = imm</td>
+<td>×</td>
+</tr>
+<tr>
+<td>AUIPC</td>
+<td>0010111</td>
+<td>rd = pc + imm</td>
+<td>×</td>
+</tr>
+<tr>
+<td>LB</td>
+<td>0000011</td>
+<td>rd = Mem[rs1 + imm] (byte)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>LH</td>
+<td>0000011</td>
+<td>rd = Mem[rs1 + imm] (half)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>LW</td>
+<td>0000011</td>
+<td>rd = Mem[rs1 + imm] (word)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>LBU</td>
+<td>0000011</td>
+<td>rd = Mem[rs1 + imm] (byte, unsigned)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>LHU</td>
+<td>0000011</td>
+<td>rd = Mem[rs1 + imm] (half, unsigned)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SB</td>
+<td>0100011</td>
+<td>Mem[rs1 + imm] = rs2 (byte)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SH</td>
+<td>0100011</td>
+<td>Mem[rs1 + imm] = rs2 (half)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>SW</td>
+<td>0100011</td>
+<td>Mem[rs1 + imm] = rs2 (word)</td>
+<td>×</td>
+</tr>
+<tr>
+<td>BEQ</td>
+<td>1100011</td>
+<td>if (rs1 == rs2) branch</td>
+<td>pc + imm</td>
+</tr>
+<tr>
+<td>BNE</td>
+<td>1100011</td>
+<td>if (rs1 != rs2) branch</td>
+<td>pc + imm</td>
+</tr>
+<tr>
+<td>BLT</td>
+<td>1100011</td>
+<td>if (rs1 &lt; rs2) (signed) branch</td>
+<td>pc + imm</td>
+</tr>
+<tr>
+<td>BGE</td>
+<td>1100011</td>
+<td>if (rs1 &gt;= rs2) (signed) branch</td>
+<td>pc + imm</td>
+</tr>
+<tr>
+<td>BLTU</td>
+<td>1100011</td>
+<td>if (rs1 &lt; rs2) (unsigned) branch</td>
+<td>pc + imm</td>
+</tr>
+<tr>
+<td>BGEU</td>
+<td>1100011</td>
+<td>if (rs1 &gt;= rs2) (unsigned) branch</td>
+<td>pc + imm</td>
+</tr>
+<tr>
+<td>JAL</td>
+<td>1101111</td>
+<td>rd = pc + 4; jump</td>
+<td>pc + imm</td>
+</tr>
+<tr>
+<td>JALR</td>
+<td>1100111</td>
+<td>rd = pc + 4; jump</td>
+<td>(rs1 + imm) &amp; ~1</td>
+</tr>
+</tbody>
+</table>
 
 
 
