@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://mydomain.org/mysite/week1/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../rv32i/">
       
       
         <link rel="next" href="../week2/">
@@ -47,6 +47,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../assets/css/styles.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -247,6 +249,48 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../riscv_assembler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V アセンブラ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rv32i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V RV32I仕様メモ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -259,6 +303,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第1回 イントロダクション
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -269,6 +325,142 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vlsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      VLSI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VLSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmos-vlsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS VLSI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmos-vlsi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS VLSI設計フロー
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CMOS VLSI設計フロー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rtl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RTL設計
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      論理合成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置配線
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロセッサアーキテクチャ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="プロセッサアーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      汎用アーキテクチャと専用アーキテクチャ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISCマイクロプロセッサ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      宿題
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      次回予告
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -420,6 +612,131 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vlsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      VLSI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VLSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmos-vlsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS VLSI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmos-vlsi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS VLSI設計フロー
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CMOS VLSI設計フロー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rtl" class="md-nav__link">
+    <span class="md-ellipsis">
+      RTL設計
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      論理合成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置配線
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      プロセッサアーキテクチャ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="プロセッサアーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      汎用アーキテクチャと専用アーキテクチャ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISCマイクロプロセッサ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      宿題
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      次回予告
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -438,9 +755,254 @@
 <div class="admonition abstract">
 <p class="admonition-title">本日の講義内容</p>
 <ul>
-<li>公開をお待ちください</li>
+<li>VLSIの概要と成り立ち</li>
+<li>現代的なCMOS VLSI設計フロー</li>
+<li>プロセッサアーキテクチャ</li>
 </ul>
 </div>
+<h2 id="vlsi">VLSI</h2>
+<p>そもそもVLSIとは何でしょうか。初回の授業ではVLSIをその基本やあらましから見ていきましょう。皆さんの多くは論理回路や、ディジタルCMOS集積回路、MOSトランジスタの動作について学んできたと思います。そうした経験を通じて、VLSIが<strong>Very Large Scale Integration</strong>の略で、大規模にトランジスタが集積された回路だということはご存じのことと思います。さて、ところで、どのくらい大規模にトランジスタが集積されていると、<strong>Very Large Scale</strong>、な回路となるのでしょうか？</p>
+<div class="admonition question">
+<p class="admonition-title">Question: <strong>Very Large Scale</strong>とは、どのくらいでしょうか?</p>
+<details class="success">
+<summary>こたえ</summary>
+<p><strong>普遍的な定義はありません</strong>。たとえば、SSI (10論理ゲート程度まで), MSI (1000論理ゲート程度まで), LSI (1万論理ゲート程度まで), VLSI (10万論理ゲート程度まで), ULSI (それ以上)といった言葉や定義もありますが、
+実際のところ、ある程度大規模なディジタルCMOS集積回路であればまずVLSI、小規模でアナログ回路要素が多くてもまあVLSIと呼ぶ、くらいに使われている言葉のように思います。例として、アカデミックな世界には、<a href="https://www.vlsisymposium.org/">Symposium on VLSI Technology and Circuits</a>といった名称の会議や、<a href="https://ieee-cas.org/publication/tvlsi">IEEE Transactions on Very Large Scale Integration (VLSI) Systems</a>といった名称の論文誌が存在しますが、トランジスタの集積度が数万個に満たない回路がこれらのフォーカス外かというと、そんなことはありません。</p>
+</details>
+</div>
+<p>たとえば、これはVLSIの例です。ちょうど10万論理ゲート程度を1チップ上に搭載したCMOS集積回路チップの写真になります。ここでは、0.18μm CMOS製造プロセスを利用しています。これは、1980年代初め頃の商用汎用プロセッサと同等のオーダの集積度になります。</p>
+<figure>
+  <img alt="finfet" src="../img/vlsi.jpg" width="400" />
+  <figcaption>0.18μm CMOS製造プロセスで製造されたVLSI。10万論理ゲート程度の規模。汎用プロセッサと無線通信回路を搭載しています。</figcaption>
+</figure>
+<div class="admonition question">
+<p class="admonition-title">Open Question: このチップはVLSIとしては異常な見た目をしています。一体どこが普通ではないでしょうか?</p>
+</div>
+<p>さて、VLSIは飛躍的な微細化・高集積化の道のりを辿ってきました。これについては有名な<strong>ムーアの法則</strong>や、<strong>Dennardスケーリング</strong>のことを学んできたことと思います。他の多くのデバイス、あるいは、他の多くの工学分野においては、微細化には何らかのドローバックが伴います。しかし、CMOS集積回路は、<strong>微細化がむしろ性能向上とコスト低減の両立をもたらす</strong>という、極めて特異な性質を示します。トランジスタのサイズを小さくすることで、スイッチング速度が向上し、同時に消費電力や製造コストが低下します。さらに、同一チップ面積内により多くのトランジスタを集積できるため、回路の高機能化が可能となります。</p>
+<div class="admonition question">
+<p class="admonition-title">Question: 現在最も集積度の高いVLSIには、どのくらいのトランジスタが集積されているでしょうか?</p>
+<details class="success">
+<summary>こたえ?</summary>
+<p><strong>約4兆個 (Cerebras Wafer Scale Engine-3, 5nm FinFET製造プロセス) (たぶん)</strong>。Wafer Scale Engineのような実装手法を1チップと見做すとすると、これが一番になると思います。ただし、こうした商用チップ内部のトランジスタ数を実際に数えることは困難なので詳細な数値には自信がありません。汎用アーキテクチャのプロセッサとしてはApple M3 Ultra、専用アーキテクチャのプロセッサ (GPU) としてはNvidia GB100がどちらも数千億個のトランジスタを集積しているようです。なお、1パッケージ内の集積度で考えると3次元積層されたV-NANDなどもトランジスタ数としては上位に入ってくる可能性があります。</p>
+</details>
+</div>
+<p>このような性質により、CMOS技術は過去数十年にわたって驚異的な進化を遂げ、情報社会の中核を担う技術として発展してきました。しかし、極度の微細化が進む中で、こうした流れが徐々に限界を迎えつつあるのも事実です。トランジスタのサイズが原子スケールに近づくにつれ、リーク電流や熱の問題が顕著になり、単純なスケーリングによる性能向上は次第に困難になってきました。</p>
+<p>こうした背景のもと、近年では<strong>FinFET</strong>や<strong>GAAFET</strong>、さらには<strong>CFET</strong>など、新しいトランジスタ構造のデバイスが登場しています。これらの技術はデバイスの研究だけでなく、集積回路の研究開発に携わる上でも理解しておくべき重要な知識です。本講義の後半では、<strong>FinFETの活用を想定したVLSIの設計</strong>を実施して貰うことになります。</p>
+<figure>
+  <img alt="finfet" src="../img/finfet.png" width="400" />
+  <figcaption>FinFETのイメージ図。今後の演習ではこうしたFinFET製造プロセスを想定した設計を実施していきます。</figcaption>
+</figure>
+<p>本講義で学んでいく現在のVLSI設計技術は、階層化や抽象化の工夫により、こうした新たなデバイス技術に対しても柔軟に対応できる設計基盤を提供します。したがって、<strong>将来的に未知のデバイスが登場したとしても、それらを活かした集積回路の設計において十分に役立つ知見となるはず</strong>です。</p>
+<h3 id="cmos-vlsi">CMOS VLSI</h3>
+<p>現代におけるVLSIの多くは、CMOS集積回路として実現されています。ディジタルCMOS集積回路について思い出してみましょう。ここでは、たとえば以下のようなMOSトランジスタから成る回路のことをそう呼ぶのでした。ディジタルCMOS集積回路においては、各MOSトランジスタはスイッチのように働きます。</p>
+<figure>
+  <img alt="" src="../img/switch.jpeg" width="800" />
+  <figcaption>MOSトランジスタの動作を単純化すると、ゲート電圧に応じてスイッチのように働くのでした。</figcaption>
+</figure>
+<p>このように、スイッチとして振る舞う複数のMOSトランジスタが組み合わさって論理ゲートとしての動作を実現し、そうした論理ゲートがさらに組み合わさることで、より複雑な論理回路を実現することができるのでした。</p>
+<figure>
+  <img alt="" src="../img/digital.jpeg" width="800" />
+  <figcaption>MOSトランジスタが相補的 (complementary) な構成をとることで、様々に利点のあるCMOS論理回路を実現可能なのでした。</figcaption>
+</figure>
+<p>こうした論理ゲートを組み合わせることを<strong>ボトムアップ</strong>に続けていけば、先ほど見てきたようなVLSIを設計することができるでしょうか? もしかすると、1000ゲート程度までならできるかもしれません。しかし、1万ゲートとなるとどうでしょう? ましてや、1000億ゲートでは?</p>
+<p>VLSIの設計は、このような<strong>複雑性</strong>との闘いです。高集積化にともなって複雑度を増していくVLSIの設計を進めていくために、設計者は様々な工夫を凝らしてきました。以降では、これまでに様々な人間の手で洗練されてきた現代的なCMOS VLSI設計フローについて概説します。</p>
+<div class="admonition question">
+<p class="admonition-title">Open Question: アナログCMOS集積回路の設計や、ディスクリートICを用いた回路の設計と比較してみるとどうでしょう?</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Introduction to VLSI Systems</p>
+<p>初期のVLSI設計に大きな影響を与えたものとして、<a href="https://books.google.co.jp/books/about/Introduction_to_VLSI_Systems.html?id=fQojAAAAMAAJ&amp;source=kp_book_description&amp;redir_esc=y">Introduction to VLSI Systems</a>という書籍があります。また、当時のVLSI設計フローやその教育に関するものとして、<a href="https://en.wikipedia.org/wiki/Mead%E2%80%93Conway_VLSI_chip_design_revolution">この記事</a>などは非常に面白いです。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">SoC/SiP/Chiplet</p>
+<p>ここでお話した複雑性、は単一のチップ (ダイ、とも呼ばれます) の上の話です。近年のコンピュータシステムにおいては、複数のチップを用いてシステムを構築する例が増えてきています。様々な機能を単一のVLSIチップに集積し実装したものをSoC (System on Chip/System on a Chip) と呼びます。一方、複数のVLSIチップによってシステムを構築し、それを単一のパッケージ内に集積したものをSiP (System in Package/System in a Package) と呼びます。最近では、SiPのような実装手法や、それを構成する各チップを指して、<strong>Chiplet</strong>という言葉が使われることも多くなっています。またSoCがSiPやChipletの対義語として利用されることも多くなっています。本講義では、このような複数VLSIによる実装を想定したマイクロアーキテクチャやRTL設計、具体的な実装技術には立ち入りませんが、今後ますます重要になっていく領域に思われます。</p>
+</div>
+<h2 id="cmos-vlsi_1">CMOS VLSI設計フロー</h2>
+<p>このような<strong>複雑性を手なづける方法として、階層化・抽象化があります</strong>。複雑なもの層別に分け、上位のレベルにおいては下位のレベルの詳細を隠すことによって、複雑なものを単純なモデルとして扱うことができます。CMOS VLSIの設計フローは、具体的には以下の図に示すような<strong>トップダウン</strong>なものになります。</p>
+<figure>
+  <img alt="finfet" src="../img/flow.png" width="800" />
+  <figcaption>CMOS VLSIの設計フロー。今後の演習ではこれを実践していきます。</figcaption>
+</figure>
+<p>ここでは汎用プロセッサの設計を題材に簡易的に示しています。<strong>マイクロアーキテクチャ</strong>とは、プロセッサの<strong>命令セットアーキテクチャ (ISA)</strong> をどのようにハードウェアとして実装するかを定めた設計のことです。ISAを実現する回路構造や処理の流れを各機能ブロックやパイプライン構成のような抽象度で表現したものです。<strong>RTL設計</strong>は、そうしたデータの流れや回路構成をより詳細に表現したもので、HDLを用いて記述されます。このRTL設計を<strong>論理合成</strong>によって論理ゲートレベルの回路へと変換します。これも現在のフローではHDLによって記述されますが、その内部は大量の論理ゲートが呼び出され、それらが直接接続されるかたちになっています。こうした論理ゲートレベル設計は<strong>配置配線</strong>によって<strong>レイアウト</strong>へと変換されます。ここでレイアウトとは、シリコン上にトランジスタや配線を物理的にどう配置・接続するかを2次元平面上の図として定めたデータです。</p>
+<p>こうした階層化・抽象化には少々異なった他のパターンもあり得ます。たとえば、上の例で想定しているように、汎用プロセッサのマイクロアーキテクチャのような抽象機械を元にしてHDLを使ってRTL設計をする場合もあれば、ほかに、もっとシンプルな有限オートマトンを元にHDLを使ってRTL設計をする、あるいは、特定のアルゴリズムを疑似コードや高級言語などで表現し、それを元にHDLを使ってRTL設計をする場合もあるでしょう。専用アーキテクチャの講義では、特に後者について扱っていくものと思います。</p>
+<p>しかし<strong>いずれの場合についても、RTL設計や、論理合成・配置配線といったフローの理解が重要になります。この講義は、まさにそうしたフローに習熟して貰うことを目的としています。</strong></p>
+<h3 id="rtl">RTL設計</h3>
+<p>RTLとは、<strong>Register Transfer Level</strong>のことで、データをいつ、どこからどこへ転送するか、という処理を、クロックを基準とした動作で記述する抽象表現です。人間が理解・設計しやすく、シミュレーションも容易です。このような表現を、ハードウェア記述言語を用いて記述します。</p>
+<p>本講義では特に、Verilog HDLの拡張版である<strong>SystemVerilog</strong>を採用して設計を進めていきます。設計向けの気の利いた機能の追加や、検証のための多様な機能が追加されています。次回以降、詳細に解説していきますが、今回はVerilog HDLの構文を思い出して貰うため、また、ちょっと気の利いたVerilog HDLとしてSystemVerilogを使っていくために、Verilog HDLとの分かりやすい違い数点を以下のコードを見ながら説明します。</p>
+<div class="language-systemverilog highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SystemVerilogを使ったシンプルな順序回路の例</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">module</span><span class="w"> </span><span class="n">led_controller</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="c1">// SystemVerilogでは、logicという便利な型があります</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="kt">logic</span><span class="w"> </span><span class="n">clk</span><span class="p">,</span><span class="w">  </span><span class="c1">// クロック信号</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">input</span><span class="w"> </span><span class="kt">logic</span><span class="w"> </span><span class="n">rst_n</span><span class="p">,</span><span class="w">  </span><span class="c1">// 非同期リセット（負論理）</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="k">output</span><span class="w"> </span><span class="kt">logic</span><span class="w"> </span><span class="n">led_out</span><span class="w">  </span><span class="c1">// LED出力（1で点灯）</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c1">// 以下はMoore型ステートマシンです</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="c1">// typedefで型にstate_tと命名 (SystemVerilog特有です)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="c1">// 状態を列挙型 (enum) で定義（SystemVerilog特有です）</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="kt">logic</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="n">IDLE</span><span class="p">,</span><span class="w">  </span><span class="c1">// 初期状態</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="n">ON</span><span class="p">,</span><span class="w">  </span><span class="c1">// LED点灯</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="n">OFF</span><span class="w">  </span><span class="c1">// LED消灯</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n">state_t</span><span class="p">;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="c1">// 現在の状態と次の状態を保持する変数</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="n">state_t</span><span class="w"> </span><span class="n">current_state</span><span class="p">,</span><span class="w"> </span><span class="n">next_state</span><span class="p">;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="c1">// SystemVerilogでは、組み合わせ回路用のalways文、always_combがあります</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="c1">// 出力制御 (状態に応じてLED出力を決定)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="k">always_comb</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="c1">// SystemVerilogでは、複数ケースが同時に真にならないことを保証するための</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="c1">// キーワード unique があります</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="k">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">current_state</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="nl">IDLE:</span><span class="w">    </span><span class="n">led_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">1&#39;b0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 初期状態では消灯</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="nl">ON:</span><span class="w">      </span><span class="n">led_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">1&#39;b1</span><span class="p">;</span><span class="w">  </span><span class="c1">// ON状態では点灯</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">            </span><span class="nl">OFF:</span><span class="w">     </span><span class="n">led_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">1&#39;b0</span><span class="p">;</span><span class="w">  </span><span class="c1">// OFF状態では消灯</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">led_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">1&#39;b0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 一応デフォルト</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="k">endcase</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">    </span><span class="c1">// 状態遷移条件 (次状態の決定)</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="k">always_comb</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">        </span><span class="k">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">current_state</span><span class="p">)</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">            </span><span class="nl">IDLE:</span><span class="w">    </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ON</span><span class="p">;</span><span class="w">  </span><span class="c1">// 起動後はONへ</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">            </span><span class="nl">ON:</span><span class="w">      </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OFF</span><span class="p">;</span><span class="w">  </span><span class="c1">// 点灯後は消灯</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">            </span><span class="nl">OFF:</span><span class="w">     </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ON</span><span class="p">;</span><span class="w">  </span><span class="c1">// 消灯後は再び点灯</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">            </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">next_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IDLE</span><span class="p">;</span><span class="w">  </span><span class="c1">// デフォルトで初期化</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">        </span><span class="k">endcase</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">    </span><span class="c1">// SystemVerilogでは、順序回路用のalways文、always_ffもあります</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">    </span><span class="c1">// 状態の更新</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">    </span><span class="k">always_ff</span><span class="w"> </span><span class="p">@(</span><span class="k">posedge</span><span class="w"> </span><span class="n">clk</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">rst_n</span><span class="p">)</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">            </span><span class="n">current_state</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">IDLE</span><span class="p">;</span><span class="w">  </span><span class="c1">// リセット時は初期状態へ</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">        </span><span class="k">else</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">            </span><span class="n">current_state</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">next_state</span><span class="p">;</span><span class="w">  </span><span class="c1">// 次状態に遷移</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">    </span><span class="k">end</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="k">endmodule</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="_1">論理合成</h3>
+<p>論理合成 (Logic synthesis, synthesis) は、ハードウェア記述言語で記述されたRTL設計を、<strong>スタンダードセル</strong>ライブラリ内のセルの組み合わせへと変換する工程です。ここでスタンダードセルライブラリとは、規格化された物理的サイズの各種論理ゲートセルのデータを集めたもので、物理的なレイアウトの他、HDLの形式で整備されたRTL設計や、ディジタル回路としての遅延や立上り・立下りなどのタイミング情報のまとまったライブラリなども含まれます。</p>
+<figure>
+  <img alt="" src="../img/synthesis.png" width="800" />
+  <figcaption>簡易的に表現した論理合成フロー。</figcaption>
+</figure>
+<p>論理合成においては、まず、RTL設計をテクノロジ非依存な中間表現へと変換、最適化し、その後、特定の製造プロセスのスタンダードセルの組み合わせとなるようマッピングしていきます。このとき、回路として所望の動作を実現するために満たすべき制約も一緒に与えられます。FPGAでの設計を既に経験している方は、制約ファイルと聞くと具体的にイメージが湧くのではないかと思います。</p>
+<p>論理合成の一連のフローは、ソフトウェアによって実現されます。代表的なツールとして、Synopsys Design Compiler (Fusion Compiler)、Cadence Genusなどが存在します。</p>
+<h3 id="_2">配置配線</h3>
+<p>配置配線 (Place and route, P&amp;R, PnR) は論理ゲートレベルの回路を物理的なレイアウトへと変換していく工程です。スタンダードセルを物理的にどのように配置し、配線するかを決定します。</p>
+<figure>
+  <img alt="" src="../img/pnr.png" width="800" />
+  <figcaption>簡易的に表現した配置配線フロー。</figcaption>
+</figure>
+<p><strong>フロアプラン</strong>では、チップ全体のサイズや入出力パッドの位置、検証済の大きなマクロブロックの位置決め、スタンダードセルを自動配置していく領域の位置決め、などを実施します。その後<strong>配置</strong>ではスタンダードセルを具体的な場所に自動的に配置します。<strong>クロックツリー合成 (CTS)</strong> では、クロック信号をチップ全体に均等に分配するための回路を構成します。バッファの挿入やツリー状の配線によって、スキューや遅延を最小化します。最後に、セル間を<strong>配線</strong>し、レイアウトを得ます。スタンダードセルライブラリの情報や制約は、各工程で利用されます。</p>
+<p>配置配線についても、一連のフローは、ソフトウェアによって実現されます。代表的なツールとして、Synopsys IC Compiler (Fusion Compiler)、Cadence Innovusなどが存在します。</p>
+<div class="admonition tip">
+<p class="admonition-title">スタンダードセルの誕生</p>
+<p>さて、このような設計フローを実現する上で重要なスタンダードセルや配置配線ツールは、いつ頃生まれたのでしょうか？初期の代表的な例として、<a href="https://ja.wikipedia.org/wiki/Intel_80386">Intel i386</a>が知られています。i386は32-bitの汎用プロセッサで、x86アーキテクチャやその後のOSやPCの隆盛を語る上でも重要なVLSIですが、VLSI設計技術の観点でも重要な節目を成しています。i386の内部を見てみると、たしかに、一部のディジタル回路が規格化されたセルによって構成されており、現在の配置配線フローで設計したマクロと近い見た目になっていることがわかります。このような内部構造について調査した<a href="https://www.righto.com/2024/01/intel-386-standard-cells.html">ブログ記事</a>が存在します。
+また、米国のベル研究所でも同様にPolycellという名前でスタンダードセルの研究がなされており
+<a href="https://dl.acm.org/doi/10.1145/62882.62886">"An optimum channel-routing algorithm for polycell layouts of integrated circuits," DAC1988.</a>のような論文で当時の技術について知ることができます。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">AI時代のVLSI設計フロー</p>
+<p>現在、あらゆるものの設計開発フローにAI/ML技術が導入されようとしています。あるいは、多くのものが既にAIによって設計されるようになっています。VLSIも例外ではありません。アカデミックな世界ではAI/MLや設計自動化 (EDA) 関連の会議でそうしたトピックが盛り上がりを見せるほか、<a href="https://mlcad.org/symposium/2025/">ACM/IEEE International Symposium on Machine Learning for CAD (MLCAD)</a> のような専門の会議が立ち上がるなどしています。この先の世界では、<strong>AIの利用を前提としたとき、VLSI設計における階層化・抽象化やそれらの間のインタフェースはどうあるべきなのか</strong>、という問いが極めて重要なものになっていくと思います。そうしたことを考えていくに当たっての出発点としても、やはり、まず人間にとって非常に適していたこれまでの設計フローについて学んでいきましょう。</p>
+</div>
+<h2 id="_3">プロセッサアーキテクチャ</h2>
+<p>さて、本講義では、汎用プロセッサをVLSIとして実現することを目指します。先に述べたVLSIの設計フローを振り返ってみると、まずマイクロアーキテクチャの策定が必要になるのでした。また、さらに抽象度の高い設計として、命令セットアーキテクチャが存在するのでした、こうした抽象度の設計を一般にプロセッサの<strong>アーキテクチャ</strong>と呼びます。コンピュータアーキテクチャについて学んだ経験のある方は、この辺りのことを思い出してみましょう。</p>
+<figure>
+  <img alt="" src="../img/arch.png" width="600" />
+  <figcaption>VLSI設計フローにおけるプロセッサアーキテクチャの位置付け。</figcaption>
+</figure>
+<h3 id="_4">汎用アーキテクチャと専用アーキテクチャ</h3>
+<p>汎用アーキテクチャと専用アーキテクチャはその名の通り、汎用性が高く様々なアプリケーションを実行可能なプロセッサアーキテクチャと、特定のアルゴリズムやアプリケーション専用でそれに対して高い性能や電力効率を達成可能なプロセッサアーキテクチャを指しています。現代では多くのVLSIは汎用アーキテクチャと専用アーキテクチャのプロセッサを混載したヘテロジニアスな構成をとるようになっています。</p>
+<p>これらに明確な線を引くことは難しいのですが、本講義では、汎用アーキテクチャとして、<strong>汎用性の高いISAを持ち、多様なソフトウェアを実行可能な汎用プロセッサ</strong>を扱います。一般に、<strong>CPU</strong>と呼ばれることが多いものです。</p>
+<div class="admonition question">
+<p class="admonition-title">Open Question: FPGAは汎用アーキテクチャでしょうか? それとも専用アーキテクチャでしょうか?</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Open Question: 量子コンピュータは汎用アーキテクチャでしょうか? それとも専用アーキテクチャでしょうか?</p>
+</div>
+<h3 id="risc">RISCマイクロプロセッサ</h3>
+<p>命令セットアーキテクチャの分類として、CISCとRISCというものがあります。RISC ISAは、まさにVLSIが隆盛し、汎用プロセッサがVLSIとして、すなわち、<strong>マイクロプロセッサ</strong>として実現され始めた時代に誕生しました。</p>
+<blockquote>
+<p><a href="https://dl.acm.org/doi/10.5555/800052.801895">"RISC I: A Reduced Instruction Set VLSI Computer," ISCA1981.</a></p>
+</blockquote>
+<p>1サイクルで実行可能かつ固定長の命令、ロード命令・ストア命令のみによるメモリアクセスといったRISCの特徴は、設計の単純化をもたらし、VLSIとしての設計・最適化を容易なものにしました。</p>
+<p>現代の汎用プロセッサの多くも、こうしたRISCの設計思想に基づくアーキテクチャを採用したマイクロプロセッサとして実現されています。特にこの講義では、シンプルかつ洗練されたRISC ISAである、<strong>RISC-V ISA</strong>を採用し、汎用プロセッサを設計していきます。</p>
+<figure>
+  <img alt="finfet" src="../img/riscv.svg" width="600" />
+  <figcaption>RISC-Vのロゴ。</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">オープンなVLSI設計環境</p>
+<p>ソフトウェアの世界でオープンソース化が様々な成功を生んだように、VLSI設計というハードウェアの世界でも設計資産や設計ツールのオープン化、その活用が試みられています。今回示したRISC-V ISAもその一例です。このようなオープンな設計環境については、後の講義で再訪することになるでしょう。</p>
+</div>
+<h2 id="_5"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18.13 12 1.26-1.26c.44-.44 1-.68 1.61-.74V9l-6-6H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h6v-1.87l.13-.13H5V5h7v7zM14 4.5l5.5 5.5H14zm5.13 9.33 2.04 2.04L15.04 22H13v-2.04zm3.72.36-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72"/></svg></span> 宿題</h2>
+<p>今回はガイダンスなのでここまでです。宿題として以下をお願いします。次回以降に用いる設計環境の準備になります。</p>
+<ol>
+<li>講義で利用するPC上で公開鍵を作成し、Slackチャンネルへ共有してください <strong>(週末までにお願いします)</strong>。</li>
+<li>講義で利用するPCにVNC Viewer (たとえば<a href="https://uvnc.com/">これ</a>)をインストールしておいてください。</li>
+</ol>
+<h2 id="_6"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 3H5a2 2 0 0 0-2 2v6h4V9l4 3-4 3v-2H3v6a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-3 14h-4v-2h4zm3-4h-7v-2h7zm0-4h-7V7h7zM3 13H0v-2h3z"/></svg></span> 次回予告</h2>
+<p>次回は、汎用アーキテクチャのプロセッサを実際に設計していきます。SystemVerilogやRISC-V ISA、RISC-Vに基づくプロセッサについて、興味のある方は予習してみてください。</p>
 
 
 
@@ -491,6 +1053,10 @@
     
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../assets/js/riscv_assembler.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
       
     
   </body>

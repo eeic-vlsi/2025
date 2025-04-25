@@ -19,6 +19,13 @@ theme:
         icon: material/weather-sunny
         name: "通常モードに切替"
 
+extra_javascript:
+  - assets/js/riscv_assembler.js
+  - https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js
+
+extra_css:
+  - assets/css/styles.css
+
 markdown_extensions:
   - admonition
   - pymdownx.details

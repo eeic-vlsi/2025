@@ -1,9 +1,9 @@
 # 第1回 イントロダクション
 
 !!! abstract "本日の講義内容"
-    - VLSIの概要と成り立ちについて
-    - 現代的なCMOS VLSIの設計フローについて
-    - プロセッサアーキテクチャについて
+    - VLSIの概要と成り立ち
+    - 現代的なCMOS VLSI設計フロー
+    - プロセッサアーキテクチャ
 
 ## VLSI
 
@@ -23,7 +23,7 @@
 
 !!! question "Open Question: このチップはVLSIとしては異常な見た目をしています。一体どこが普通ではないでしょうか?"
 
-さて、VLSIは飛躍的な微細化・高集積化の道のりを辿ってきました。これについては有名な**ムーアの法則**や、**Denardスケーリング**のことを学んできたことと思います。他の多くのデバイス、あるいは、他の多くの工学分野においては、微細化には何らかのドローバックが伴います。しかし、CMOS集積回路は、**微細化がむしろ性能向上とコスト低減の両立をもたらす**という、極めて特異な性質を示します。トランジスタのサイズを小さくすることで、スイッチング速度が向上し、同時に消費電力や製造コストが低下します。さらに、同一チップ面積内により多くのトランジスタを集積できるため、回路の高機能化が可能となります。
+さて、VLSIは飛躍的な微細化・高集積化の道のりを辿ってきました。これについては有名な**ムーアの法則**や、**Dennardスケーリング**のことを学んできたことと思います。他の多くのデバイス、あるいは、他の多くの工学分野においては、微細化には何らかのドローバックが伴います。しかし、CMOS集積回路は、**微細化がむしろ性能向上とコスト低減の両立をもたらす**という、極めて特異な性質を示します。トランジスタのサイズを小さくすることで、スイッチング速度が向上し、同時に消費電力や製造コストが低下します。さらに、同一チップ面積内により多くのトランジスタを集積できるため、回路の高機能化が可能となります。
 
 !!! question "Question: 現在最も集積度の高いVLSIには、どのくらいのトランジスタが集積されているでしょうか?"
     ??? Success "こたえ?" 
@@ -93,18 +93,19 @@ RTLとは、**Register Transfer Level**のことで、データをいつ、ど�
 ``` systemverilog linenums="1" title="SystemVerilogを使ったシンプルな順序回路の例"
 module led_controller (
     // SystemVerilogでは、logicという便利な型があります
-    input  logic clk,       // クロック信号
-    input  logic reset_n,   // 非同期リセット（負論理）
-    output logic led_out    // LED出力（1で点灯）
+    input logic clk,  // クロック信号
+    input logic rst_n,  // 非同期リセット（負論理）
+    output logic led_out  // LED出力（1で点灯）
 );
 
     // 以下はMoore型ステートマシンです
 
+    // typedefで型にstate_tと命名 (SystemVerilog特有です)
     // 状態を列挙型 (enum) で定義（SystemVerilog特有です）
     typedef enum logic [1:0] {
-        IDLE,    // 初期状態
-        ON,      // LED点灯
-        OFF      // LED消灯
+        IDLE,  // 初期状態
+        ON,  // LED点灯
+        OFF  // LED消灯
     } state_t;
 
     // 現在の状態と次の状態を保持する変数
@@ -117,20 +118,20 @@ module led_controller (
         // SystemVerilogでは、複数ケースが同時に真にならないことを保証するための
         // キーワード unique があります
         unique case (current_state)  
-            IDLE:   led_out = 1'b0;  // 初期状態では消灯
-            ON:     led_out = 1'b1;  // ON状態では点灯
-            OFF:    led_out = 1'b0;  // OFF状態では消灯
-            default:led_out = 1'b0;  // 一応デフォルト
+            IDLE:    led_out = 1'b0;  // 初期状態では消灯
+            ON:      led_out = 1'b1;  // ON状態では点灯
+            OFF:     led_out = 1'b0;  // OFF状態では消灯
+            default: led_out = 1'b0;  // 一応デフォルト
         endcase
     end
 
     // 状態遷移条件 (次状態の決定)
     always_comb begin
         unique case (current_state)
-            IDLE:   next_state = ON;     // 起動後はONへ
-            ON:     next_state = OFF;    // 点灯後は消灯
-            OFF:    next_state = ON;     // 消灯後は再び点灯
-            default:next_state = IDLE;   // デフォルトで初期化
+            IDLE:    next_state = ON;  // 起動後はONへ
+            ON:      next_state = OFF;  // 点灯後は消灯
+            OFF:     next_state = ON;  // 消灯後は再び点灯
+            default: next_state = IDLE;  // デフォルトで初期化
         endcase
     end
 
@@ -138,7 +139,7 @@ module led_controller (
 
     // 状態の更新
     always_ff @(posedge clk) begin
-        if (!reset_n)
+        if (!rst_n)
             current_state <= IDLE;  // リセット時は初期状態へ
         else
             current_state <= next_state;  // 次状態に遷移
