@@ -356,8 +356,8 @@ ALUの設計を続けていきます。ALUでは、加減算、論理演算、�
             input logic [31:0] insn,
             output logic [31:0] imm,
             output logic [4:0] alu_code,
-            output logic [1:0] alu_op1_sel,
-            output logic [1:0] alu_op2_sel,
+            output logic alu_op1_sel,
+            output logic alu_op2_sel,
             output logic reg_we,
             output logic [2:0] is_load,
             output logic [1:0] is_store
@@ -817,8 +817,8 @@ ALUの設計を続けていきます。ALUでは、加減算、論理演算、�
         input logic [31:0] insn,
         output logic [31:0] imm,
         output logic [4:0] alu_code,
-        output logic [1:0] alu_op1_sel,
-        output logic [1:0] alu_op2_sel,
+        output logic alu_op1_sel,
+        output logic alu_op2_sel,
         output logic reg_we,
         output logic [2:0] is_load,
         output logic [1:0] is_store
@@ -1035,8 +1035,8 @@ ALUの設計を続けていきます。ALUでは、加減算、論理演算、�
         logic [31:0] insn;
         logic [31:0] imm;
         logic [4:0]  alu_code;
-        logic [1:0]  alu_op1_sel;
-        logic [1:0]  alu_op2_sel;
+        logic alu_op1_sel;
+        logic alu_op2_sel;
         logic        reg_we;
         logic [2:0]  is_load;
         logic [1:0]  is_store;
@@ -1141,7 +1141,7 @@ module program_counter (
     always_ff @(posedge clk) begin
         if (!rst_n) begin
             pc <= 32'd0;
-        end else if begin
+        end else begin
             pc <= next_pc;
         end
     end
