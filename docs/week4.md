@@ -292,6 +292,100 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
         endmodule
         ```
 
+最後にそれぞれを組み合わせれば、データメモリの完成です。
+
+!!! exercise "演習: データメモリの設計"
+    ストア処理部分とロード処理部分を合わせてデータメモリを設計しましょう。
+    ??? Success "こたえ"
+        ``` systemverilog linenums="1"
+        module dmem (
+            input logic clk,
+            input logic [31:0] addr,
+            input logic [31:0] wr_data,
+            input logic [2:0] is_load,
+            input logic [1:0] is_store,
+            output logic [31:0] rd_data
+        );
+
+            logic [31:0] mem [0:255];
+            logic [3:0] wr_en;
+
+            // store
+            always_comb begin
+                unique case (is_store)
+                    2'b00: wr_en = 4'b0000;
+                    2'b01: begin
+                        unique case (addr[1:0])
+                            2'b00: wr_en = 4'b0001;
+                            2'b01: wr_en = 4'b0010;
+                            2'b10: wr_en = 4'b0100;
+                            2'b11: wr_en = 4'b1000;
+                        endcase
+                    end
+                    2'b10: begin
+                        unique case (addr[1:0])
+                            2'b00: wr_en = 4'b0011;
+                            2'b01: wr_en = 4'b0110;
+                            2'b10: wr_en = 4'b1100;
+                            default: wr_en = 4'b0000;
+                        endcase
+                    end
+                    2'b11: wr_en = 4'b1111;
+                endcase
+            end
+
+            always_ff @(posedge clk) begin
+                if (wr_en[0]) mem[addr[31:2]][7:0] <= wr_data[7:0];
+                if (wr_en[1]) mem[addr[31:2]][15:8] <= wr_data[15:8];
+                if (wr_en[2]) mem[addr[31:2]][23:16] <= wr_data[23:16];
+                if (wr_en[3]) mem[addr[31:2]][31:24] <= wr_data[31:24];
+            end
+
+            // load
+            always_comb begin
+                unique case (is_load)
+                    3'b000: rd_data = 32'd0;
+                    3'b001: begin
+                        unique case (addr[1:0])
+                            2'b00: rd_data = {{24{mem[addr[31:2]][7]}}, mem[addr[31:2]][7:0]};
+                            2'b01: rd_data = {{24{mem[addr[31:2]][15]}}, mem[addr[31:2]][15:8]};
+                            2'b10: rd_data = {{24{mem[addr[31:2]][23]}}, mem[addr[31:2]][23:16]};
+                            2'b11: rd_data = {{24{mem[addr[31:2]][31]}}, mem[addr[31:2]][31:24]};
+                        endcase
+                    end
+                    3'b010: begin
+                        unique case (addr[1:0])
+                            2'b00: rd_data = {{16{mem[addr[31:2]][15]}}, mem[addr[31:2]][15:0]};
+                            2'b01: rd_data = {{16{mem[addr[31:2]][23]}}, mem[addr[31:2]][23:8]};
+                            2'b10: rd_data = {{16{mem[addr[31:2]][31]}}, mem[addr[31:2]][31:16]};
+                            default: rd_data = 32'd0;
+                        endcase
+                    end
+                    3'b011: rd_data = mem[addr[31:2]];
+                    3'b101: begin
+                        unique case (addr[1:0])
+                            2'b00: rd_data = {24'd0, mem[addr[31:2]][7:0]};
+                            2'b01: rd_data = {24'd0, mem[addr[31:2]][15:8]};
+                            2'b10: rd_data = {24'd0, mem[addr[31:2]][23:16]};
+                            2'b11: rd_data = {24'd0, mem[addr[31:2]][31:24]};
+                        endcase
+                    end
+                    3'b110: begin
+                        unique case (addr[1:0])
+                            2'b00: rd_data = {16'd0, mem[addr[31:2]][15:0]};
+                            2'b01: rd_data = {16'd0, mem[addr[31:2]][23:8]};
+                            2'b10: rd_data = {16'd0, mem[addr[31:2]][31:16]};
+                            default: rd_data = 32'd0;
+                        endcase
+                    end
+                    default: rd_data = 32'd0;
+                endcase
+            end
+
+        endmodule
+        ```
+
+
 ### 命令メモリの設計
 
 <figure markdown="span">
@@ -767,7 +861,7 @@ module imem (
 endmodule
 ```
 
-簡単な命令列であれば、[RISC-Vアセンブラ](riscv_assembler.md)を利用して生成できます。汎用プロセッサはプログラマブルであるはずなので、今回のようなシミュレーションだけで利用可能な初期値代入ではなく、命令メモリに任意の命令を書き込んでいくための方法が本来必要です。こうした方法については次回以降にまた確認していくことにします。
+簡単な命令列であれば、[RISC-Vアセンブラ](riscv_assembler.md)を利用して生成できます。汎用プロセッサはプログラマブルであるはずなので、今回のようにシミュレーションだけで利用可能な初期値代入ではなく、命令メモリに任意の命令を書き込んでいくための方法が本来必要となるはずです。そうした方法については次回以降にまた確認していくことにします。
 
 また、テストベンチ`cpu_tb.sv`については以下のようなシンプルなものを用意してみます。ここでは命令メモリへの外部からの命令書き込みは常になしとして、クロックだけを変化させ動作を確認します。
 
