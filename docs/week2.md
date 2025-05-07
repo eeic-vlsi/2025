@@ -77,6 +77,7 @@ SystemVerilogでは、複雑な組み合わせ回路は、`always_comb`の中で
                 end else begin
                     y = 1'b0;
                 end
+            end
         endmodule
         ```
 
