@@ -39,7 +39,7 @@ RISC-V ISAでは基本的にメモリアクセスは**リトルエンディア�
 
 LH、LHU、SHで2Byteのデータを扱う場合には、いくつかのパターンが存在します。まず、`0x08`に対する命令を処理する場合、`0x08`と`0x09`に対応する2Byteの領域を読み書きします。また同様に、`0x09`に対する命令を処理する場合、`0x09`と`0x0A`に対応する2Byteの領域を、`0x0A`に対する命令を処理する場合、`0x0A`と`0x0B`に対応する2Byteの領域を読み書きします。
 
-ただし、一番左に示すような、`0x0B`に対する命令については考慮しません。このように想定するバイトの境界をまたぐアクセスを未アラインのメモリアクセスと呼びます。なお、今回の実装においてはこのように仕様を定めますが、他のRISC-V ISAに基づく汎用プロセッサにおいては異なることもあります (コラム参照のこと)。
+ただし、一番右に示すような、`0x0B`に対する命令については考慮しません。このように想定するバイトの境界をまたぐアクセスを未アラインのメモリアクセスと呼びます。なお、今回の実装においてはこのように仕様を定めますが、他のRISC-V ISAに基づく汎用プロセッサにおいては異なることもあります (コラム参照のこと)。
 
 <figure markdown="span">
   ![](img/memoryb.png){ width="800" }
@@ -94,6 +94,7 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
 
         logic [31:0] mem [0:255];
         logic [3:0] wr_en;
+        logic [31:0] wr_data_aligned;
 
         // store
         always_comb begin
@@ -119,6 +120,15 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
             endcase
         end
 
+        always_comb begin
+            unique case (addr[1:0])
+                2'b00: wr_data_aligned = wr_data;                      
+                2'b01: wr_data_aligned = {wr_data[23:0], 8'd0};
+                2'b10: wr_data_aligned = {wr_data[15:0], 16'd0};
+                2'b11: wr_data_aligned = {wr_data[ 7:0], 24'd0};
+            endcase
+        end
+
         always_ff @(posedge clk) begin
             if (wr_en[0]) mem[addr[31:2]][7:0] <= ;
             if (wr_en[1]) mem[addr[31:2]][15:8] <= ;
@@ -139,6 +149,7 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
 
             logic [31:0] mem [0:255];
             logic [3:0] wr_en;
+            logic [31:0] wr_data_aligned;
 
             // store
             always_comb begin
@@ -164,11 +175,20 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
                 endcase
             end
 
+            always_comb begin
+                unique case (addr[1:0])
+                    2'b00: wr_data_aligned = wr_data;                      
+                    2'b01: wr_data_aligned = {wr_data[23:0], 8'd0};
+                    2'b10: wr_data_aligned = {wr_data[15:0], 16'd0};
+                    2'b11: wr_data_aligned = {wr_data[ 7:0], 24'd0};
+                endcase
+            end
+
             always_ff @(posedge clk) begin
-                if (wr_en[0]) mem[addr[31:2]][7:0] <= wr_data[7:0];
-                if (wr_en[1]) mem[addr[31:2]][15:8] <= wr_data[15:8];
-                if (wr_en[2]) mem[addr[31:2]][23:16] <= wr_data[23:16];
-                if (wr_en[3]) mem[addr[31:2]][31:24] <= wr_data[31:24];
+                if (wr_en[0]) mem[addr[31:2]][7:0] <= wr_data_aligned[7:0];
+                if (wr_en[1]) mem[addr[31:2]][15:8] <= wr_data_aligned[15:8];
+                if (wr_en[2]) mem[addr[31:2]][23:16] <= wr_data_aligned[23:16];
+                if (wr_en[3]) mem[addr[31:2]][31:24] <= wr_data_aligned[31:24];
             end
         ```
 
@@ -309,6 +329,7 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
 
             logic [31:0] mem [0:255];
             logic [3:0] wr_en;
+            logic [31:0] wr_data_aligned;
 
             // store
             always_comb begin
@@ -334,11 +355,20 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
                 endcase
             end
 
+            always_comb begin
+                unique case (addr[1:0])
+                    2'b00: wr_data_aligned = wr_data;                      
+                    2'b01: wr_data_aligned = {wr_data[23:0], 8'd0};
+                    2'b10: wr_data_aligned = {wr_data[15:0], 16'd0};
+                    2'b11: wr_data_aligned = {wr_data[ 7:0], 24'd0};
+                endcase
+            end
+
             always_ff @(posedge clk) begin
-                if (wr_en[0]) mem[addr[31:2]][7:0] <= wr_data[7:0];
-                if (wr_en[1]) mem[addr[31:2]][15:8] <= wr_data[15:8];
-                if (wr_en[2]) mem[addr[31:2]][23:16] <= wr_data[23:16];
-                if (wr_en[3]) mem[addr[31:2]][31:24] <= wr_data[31:24];
+                if (wr_en[0]) mem[addr[31:2]][7:0] <= wr_data_aligned[7:0];
+                if (wr_en[1]) mem[addr[31:2]][15:8] <= wr_data_aligned[15:8];
+                if (wr_en[2]) mem[addr[31:2]][23:16] <= wr_data_aligned[23:16];
+                if (wr_en[3]) mem[addr[31:2]][31:24] <= wr_data_aligned[31:24];
             end
 
             // load
