@@ -125,7 +125,7 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
                 2'b00: wr_data_aligned = wr_data;                      
                 2'b01: wr_data_aligned = {wr_data[23:0], 8'd0};
                 2'b10: wr_data_aligned = {wr_data[15:0], 16'd0};
-                2'b11: wr_data_aligned = {wr_data[ 7:0], 24'd0};
+                2'b11: wr_data_aligned = {wr_data[7:0], 24'd0};
             endcase
         end
 
@@ -180,7 +180,7 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
                     2'b00: wr_data_aligned = wr_data;                      
                     2'b01: wr_data_aligned = {wr_data[23:0], 8'd0};
                     2'b10: wr_data_aligned = {wr_data[15:0], 16'd0};
-                    2'b11: wr_data_aligned = {wr_data[ 7:0], 24'd0};
+                    2'b11: wr_data_aligned = {wr_data[7:0], 24'd0};
                 endcase
             end
 
@@ -360,7 +360,7 @@ LB、LBU、SBで1Byteのデータを扱う場合にも4Byteのそれぞれにつ
                     2'b00: wr_data_aligned = wr_data;                      
                     2'b01: wr_data_aligned = {wr_data[23:0], 8'd0};
                     2'b10: wr_data_aligned = {wr_data[15:0], 16'd0};
-                    2'b11: wr_data_aligned = {wr_data[ 7:0], 24'd0};
+                    2'b11: wr_data_aligned = {wr_data[7:0], 24'd0};
                 endcase
             end
 
