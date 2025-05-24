@@ -849,7 +849,7 @@
 </figure>
 <p><code>Netlist</code>として、まずゲートレベル設計のVerilog HDLファイルを読み込みます。これは先ほど得られた論理合成後の<code>regfile.vnet</code>です。<code>Top Cell</code>についても<code>By User</code>として<code>regfile</code>と明示的に指定しておきます。</p>
 <p><code>Technology/Physical Libraries</code>としては、<code>LEF Files</code>から.lefファイルを読み込みます。これには<code>/home/resources/gscl45nm/gscl45nm.lef</code>を指定します。</p>
-<p><code>Power</code>で電源ネット名を指定します。ここではそれぞれ、<code>Vdd</code>、<code>gnd</code>とします。</p>
+<p><code>Power</code>で電源ネット名を指定します。ここではそれぞれ、<code>VDD</code>、<code>VSS</code>とします。</p>
 <p>その後、<code>Create Analysis Configuration</code>から、タイミングライブラリや制約ファイルの指定をおこないます。様々な動作条件におけるタイミング制約を指定可能なことから、<code>Multi-Mode Multi-Corner (MMMC) Browser</code>という名称になっています。</p>
 <figure>
   <img alt="" src="../img/browser.png" width="600" />
