@@ -107,7 +107,7 @@ $ innovus
 
 `Technology/Physical Libraries`としては、`LEF Files`から.lefファイルを読み込みます。これには`/home/resources/gscl45nm/gscl45nm.lef`を指定します。
 
-`Power`で電源ネット名を指定します。ここではそれぞれ、`Vdd`、`gnd`とします。
+`Power`で電源ネット名を指定します。ここではそれぞれ、`VDD`、`VSS`とします。
 
 その後、`Create Analysis Configuration`から、タイミングライブラリや制約ファイルの指定をおこないます。様々な動作条件におけるタイミング制約を指定可能なことから、`Multi-Mode Multi-Corner (MMMC) Browser`という名称になっています。
 
