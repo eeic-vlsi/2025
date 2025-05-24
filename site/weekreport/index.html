@@ -359,7 +359,7 @@
         
   
   <span class="md-ellipsis">
-    第4回 プロセッサのVLSI実装
+    第4回 プロセッサの論理合成
     
   </span>
   
@@ -380,7 +380,7 @@
         
   
   <span class="md-ellipsis">
-    第5回 プロセッサの高性能化
+    第5回 配置配線
     
   </span>
   
@@ -401,7 +401,7 @@
         
   
   <span class="md-ellipsis">
-    第6回 メモリと周辺回路
+    第6回 プロセッサの高性能化
     
   </span>
   
@@ -427,6 +427,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    レポート課題
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -437,6 +449,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      汎用アーキテクチャ回最終レポート
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -462,6 +502,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      汎用アーキテクチャ回最終レポート
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -480,9 +537,36 @@
 <div class="admonition danger">
 <p class="admonition-title">課題内容</p>
 <ul>
-<li>公開をお待ちください</li>
+<li><strong>独自のVLSIを設計してみましょう</strong></li>
+<li><strong>締切: 2025/7/31</strong></li>
 </ul>
 </div>
+<h2 id="_2">汎用アーキテクチャ回最終レポート</h2>
+<p>汎用アーキテクチャ回の最終レポートとして、以下の<strong>いずれか1つ</strong>に取り組んでみてください</p>
+<div class="admonition danger">
+<p class="admonition-title">課題A: 汎用プロセッサのVLSI実装</p>
+<p>講義で取り扱ったシングルサイクルプロセッサ or 同等の機能を持ったRV32I汎用プロセッサに、改良を加えた上で、Design Compilerで論理合成、Innovusで配置配線し、以下についてまとめてください</p>
+<ul>
+<li>論理合成の結果: 改良前後における消費電力や最大動作周波数、面積の変化</li>
+<li>配置配線の結果: 改良後のプロセッサについて、最終的に得られたレイアウト</li>
+</ul>
+<p>改良のアイディアとしては、ISAの変更 (RISC-V RV32IMなど)、マイクロアーキテクチャの変更（パイプライン化、分岐予測器の追加など）、その他のRTL設計の変更（I/O回路の追加、あるいはSystemVerilog記述方法の変更など）が挙げられます。<strong>講義で示した2段パイプラインプロセッサや5段パイプラインプロセッサ、分岐予測器のRTL設計を改良案ということで利用しても良いです</strong></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">課題B: オープンEDAを活用したVLSI実装</p>
+<p>講義で取り扱った汎用プロセッサ or 独自に設計した回路を、オープンなVLSI設計環境を利用して論理合成・配置配線、または手動レイアウトし、その結果についてまとめてください</p>
+<p>設計環境の例としては、<a href="https://github.com/mflowgen/mflowgen">mflowgen</a>や<a href="https://github.com/The-OpenROAD-Project/OpenLane">OpenLane</a>、<a href="https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts">OpenROAD</a>といったものを想定していますが、これらに限りません</p>
+</div>
+<p>結果は図表を用いて2ページ以内のドキュメントにまとめ、設計した回路やスクリプトのソースコードとともにまとめて提出してください</p>
+<ul>
+<li>提出ファイル: zip等の圧縮ファイル (pdfとソースコードを含む)<ul>
+<li>A4, 2ページ以内のpdf</li>
+<li>設計した回路やスクリプトのソースコード</li>
+</ul>
+</li>
+<li>提出先: UTOL講義ページの「汎用アーキテクチャ回最終レポート」</li>
+<li><strong>締切: 2025/7/31 24:00 (JST)</strong></li>
+</ul>
 
 
 

@@ -22,7 +22,7 @@
     
     
       
-        <title>第5回 プロセッサの高性能化 - VLSIアーキテクチャ 2025</title>
+        <title>第5回 配置配線 - VLSIアーキテクチャ 2025</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第5回 プロセッサの高性能化
+              第5回 配置配線
             
           </span>
         </div>
@@ -361,7 +361,7 @@
         
   
   <span class="md-ellipsis">
-    第4回 プロセッサのVLSI実装
+    第4回 プロセッサの論理合成
     
   </span>
   
@@ -387,16 +387,176 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第5回 配置配線
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    第5回 プロセッサの高性能化
+    第5回 配置配線
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#innovus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Innovusを用いた配置配線
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Innovusを用いた配置配線">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置配線の基本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの論理合成・配置配線
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レジスタファイルの論理合成・配置配線">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの論理合成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innovus_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (Innovusの起動・基本設定)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (フロアプラン)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (配置)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cts" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (CTS・配線)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (レイアウト出力)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      スクリプト化とコマンドライン実行
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      自習課題
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      次回予告
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -413,7 +573,7 @@
         
   
   <span class="md-ellipsis">
-    第6回 メモリと周辺回路
+    第6回 プロセッサの高性能化
     
   </span>
   
@@ -464,6 +624,143 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#innovus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Innovusを用いた配置配線
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Innovusを用いた配置配線">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置配線の基本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの論理合成・配置配線
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レジスタファイルの論理合成・配置配線">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの論理合成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innovus_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (Innovusの起動・基本設定)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (フロアプラン)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (配置)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cts" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (CTS・配線)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      レジスタファイルの配置配線 (レイアウト出力)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      スクリプト化とコマンドライン実行
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      自習課題
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      次回予告
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -478,13 +775,283 @@
 
 
 
-<h1 id="5">第5回 プロセッサの高性能化</h1>
+<h1 id="5">第5回 配置配線</h1>
 <div class="admonition abstract">
 <p class="admonition-title">本日の講義内容</p>
 <ul>
-<li>公開をお待ちください</li>
+<li>Innovusを用いた配置配線</li>
 </ul>
 </div>
+<h2 id="innovus">Innovusを用いた配置配線</h2>
+<h3 id="_1">配置配線の基本</h3>
+<figure>
+  <img alt="" src="../img/pnr.png" width="800" />
+  <figcaption>簡易的に表現した配置配線フロー (再掲)。</figcaption>
+</figure>
+<p>本日はまず配置配線に取り組んでいきます。配置配線では、ツールを利用して論理ゲートレベル設計をレイアウトへと変換するのでした。ツールとしては、<strong>Cadence Innovus</strong>を利用します。</p>
+<p>配置配線にあたっても、論理合成と同様、論理ゲートの具体的なデータが格納されたスタンダードセルライブラリの情報や、タイミング等の制約が必要になります。より具体的には、</p>
+<ul>
+<li><strong>.lib</strong>ファイル: 標準化された形式で、スタンダードセルライブラリ内の各セル (各論理ゲートやフリップフロップなど) の論理的な動作、遅延情報、消費電力、入出力特性 (遷移時間や容量) が記述されたテキストファイル。Libertyファイルと呼ぶ。</li>
+<li><strong>.lef</strong>ファイル: スタンダードセルライブラリ内の各セルの物理配線情報がまとまったテキストファイル。</li>
+<li><strong>.gds</strong>ファイル: スタンダードセルライブラリ内の各セルのレイアウトファイル。配置配線工程ではこれらと配線のレイアウトデータが組み合わさって最終的な一つのレイアウトファイルを生成する。</li>
+<li><strong>.sdc</strong>ファイル: タイミングやクロック信号、容量といった制約がまとまったファイル。通常、論理合成ツールが出力するものを用いる。</li>
+</ul>
+<p>といったものが必要になります。</p>
+<div class="admonition tip">
+<p class="admonition-title">.dbファイルと.libファイル</p>
+<p>SynopsysのDesign Compilerでは.dbファイルを利用しましたが、CadenceのInnovusでは.libファイルを利用します。これらは中身としては同様のLibertyファイルですが、前者は可読性の無いバイナリ形式で、後者は可読性のあるテキスト形式という違いがあります。製造プロセスによっては双方が揃っていないこともあるでしょう。.libのみが存在する場合、<strong>Synopsys Library Compiler</strong>というツールを用いて.libから.dbファイルを生成することができます。</p>
+</div>
+<h3 id="_2">レジスタファイルの論理合成・配置配線</h3>
+<h4 id="_3">環境設定</h4>
+<p>レジスタファイルの配置配線をおこないましょう。まず、Innovusを実行するための前準備として、<code>~/.cshrc</code>の末尾に、</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># for cadence INNOVUS</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">set</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="w"> </span>/home/kadomoto/innovus/bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">             </span>/home/kadomoto/innovus/tools.lnx86/bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">             </span>/home/kadomoto/innovus/tools.lnx86/dfII/bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">             </span>/home/kadomoto/innovus/share/oa/bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">             </span><span class="nv">$path</span><span class="w"> </span><span class="o">)</span>
+</span></code></pre></div>
+<p>といった記述を追記しておきます。その後、</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.cshrc
+</span></code></pre></div>
+<p>とすることによってツールを実行可能にします。以降はターミナル起動時にこれを読み込むので何もしなくてもInnovusが利用可能なはずです。</p>
+<h4 id="_4">レジスタファイルの論理合成</h4>
+<p>配置配線に先立って、まず、論理合成用のファイルを用意します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>/home/resources/WORK<span class="w"> </span><span class="si">${</span><span class="nv">自分の作業ディレクトリ</span><span class="si">}</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span>cp<span class="w"> </span>/home/resources/syn_regfile_45nm.tcl<span class="w"> </span><span class="si">${</span><span class="nv">自分の作業ディレクトリ</span><span class="si">}</span>
+</span></code></pre></div>
+<p>として、以前作成したレジスタファイルのRTL設計ファイル (<code>WORK/regfile.sv</code>, <code>WORK/cpu_pkg.sv</code>) と論理合成用スクリプト (<code>syn_alu_45nm.tcl</code>) を自分の作業ディレクトリへとコピーしましょう。論理合成スクリプトの冒頭は、今回論理合成・配置配線に利用する45nm CMOS製造プロセスのスタンダードセル固有の記述です。</p>
+<p>なお、レジスタファイルのブロック図は以下のようなもので、中身としては32bitのレジスタが31個とゼロレジスタが1個存在するのでした。</p>
+<figure>
+  <img alt="" src="../img/regfile.png" width="500" />
+  <figcaption>レジスタファイル (再掲)。</figcaption>
+</figure>
+<p>ファイルが揃ったら、論理合成を実行します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>dc_shell-xg-t<span class="w"> </span>-f<span class="w"> </span>syn_regfile_45nm.tcl
+</span></code></pre></div>
+<p>生成された<code>regfile.vnet</code>を見ると、レジスタファイルを構成するために大量のDFFセルが呼び出されていることがわかります。また、</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>gedit<span class="w"> </span>regfile_area.txt
+</span></code></pre></div>
+<p>などとして面積を確認すると、<code>Total cell area</code>は<code>21117.561043</code>となり、スタンダードセルを70%の密度で配置するとすると、配置配線後の最終的な面積は174μm角程度になると予想されます。</p>
+<h4 id="innovus_1">レジスタファイルの配置配線 (Innovusの起動・基本設定)</h4>
+<p>続いて、配置配線を実行していきましょう。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>innovus
+</span></code></pre></div>
+<p>とすると、Innovusが起動します。</p>
+<figure>
+  <img alt="" src="../img/innovus.png" width="800" />
+  <figcaption>Innovusの起動画面。</figcaption>
+</figure>
+<p>まず、Innovusに必要ファイルを読み込みます。<code>File</code>-&gt;<code>Import Design</code>から、設定画面を起動します。</p>
+<figure>
+  <img alt="" src="../img/import.png" width="600" />
+  <figcaption>Innovusの初期設定画面。</figcaption>
+</figure>
+<p><code>Netlist</code>として、まずゲートレベル設計のVerilog HDLファイルを読み込みます。これは先ほど得られた論理合成後の<code>regfile.vnet</code>です。<code>Top Cell</code>についても<code>By User</code>として<code>regfile</code>と明示的に指定しておきます。</p>
+<p><code>Technology/Physical Libraries</code>としては、<code>LEF Files</code>から.lefファイルを読み込みます。これには<code>/home/resources/gscl45nm/gscl45nm.lef</code>を指定します。</p>
+<p><code>Power</code>で電源ネット名を指定します。ここではそれぞれ、<code>Vdd</code>、<code>gnd</code>とします。</p>
+<p>その後、<code>Create Analysis Configuration</code>から、タイミングライブラリや制約ファイルの指定をおこないます。様々な動作条件におけるタイミング制約を指定可能なことから、<code>Multi-Mode Multi-Corner (MMMC) Browser</code>という名称になっています。</p>
+<figure>
+  <img alt="" src="../img/browser.png" width="600" />
+  <figcaption>Innovusのタイミング制約設定画面。</figcaption>
+</figure>
+<p>まず、タイミングや制約ファイルを指定しましょう。</p>
+<figure>
+  <img alt="" src="../img/mmmco.png" width="800" />
+  <figcaption>InnovusのMMMC Objects設定。</figcaption>
+</figure>
+<p><code>MMMC Objects</code>の中から<code>Library Sets</code>をダブルクリックして各セルのタイミングが記述された.libファイルを指定します。これには<code>/home/resources/gscl45nm/gscl45nm.lib</code>を指定します。<code>Name</code>に<code>default</code>という名前を入力して保存します。</p>
+<p>また、<code>Delay Corners</code>をダブルクリックしてタイミング条件の指定をおこないます。<code>library Set</code>に先ほど設定した<code>default</code>ライブラリを指定して、これを元にタイミングを計算することにします。これについても、<code>Name</code>に<code>default</code>という名前を入力して保存します。</p>
+<p>同様に、<code>Constraint Modes</code>をダブルクリックして制約を設定します。<code>SDC Constraint Files</code>として先ほど論理合成で生成した<code>regfile.sdc</code>を指定します。やはりこれも、<code>Name</code>に<code>default</code>という名前を入力して保存します。</p>
+<p>その後、こうした指定内容をAnalysis Viewsに設定します。<code>Analysis Views</code>をダブルクリックして、<code>Constraint Mode</code>と<code>Delay Corner</code>を<code>default</code>とし、<code>Name</code>に<code>default</code>という名前を入力して保存します。その後、<code>Setup Analysis View</code>と<code>Hold Analysis View</code>に、この<code>default</code>を設定します。これにてMMMCの設定は完了です。</p>
+<figure>
+  <img alt="" src="../img/mmmc.png" width="600" />
+  <figcaption>InnovusのMMMC設定完了時の見た目。</figcaption>
+</figure>
+<p><code>Save&amp;Close</code>より、<code>Default.view</code>と名前を付けて終了します。</p>
+<figure>
+  <img alt="" src="../img/design.png" width="600" />
+  <figcaption>Innovusの初期設定完了時の見た目。</figcaption>
+</figure>
+<p>ここで、<code>OK</code>として、初期設定を完了します。</p>
+<h4 id="_5">レジスタファイルの配置配線 (フロアプラン)</h4>
+<p>続いて、フロアプランをおこないます。この工程では、最初に、スタンダードセルを配置する領域、マクロ（レイアウト済の大きめの部品）を配置する領域などを決めます。</p>
+<p>初期設定を終えると、画面にスタンダードセル配置領域が既に仮決めされています。<code>k</code>でルーラーを使うことができるので、さきほどの見積と同程度の面積になっているか確認してみると良いでしょう (<code>Shift+k</code>で消せます)。</p>
+<p>さて、画面上部の<code>Floorplan</code>-&gt;<code>Specify Floorplan</code>からスタンダードセル配置領域を詳細に指定できます。</p>
+<figure>
+  <img alt="" src="../img/floorplan.png" width="600" />
+  <figcaption>フロアプランの設定。</figcaption>
+</figure>
+<p>ここではこのようにしてみましょう。<code>Ratio</code>を1 (正方形) に、<code>Core Utilization</code>を0.7として、配置密度を70%にします。また、<code>Core to IO Boundary</code>をそれぞれ20と指定して、I/Oとの距離を20μmとします。</p>
+<figure>
+  <img alt="" src="../img/floorplans.png" width="800" />
+  <figcaption>フロアプラン設定後の見た目。</figcaption>
+</figure>
+<p>ここで、各I/Oピンの配置を指定します。Innovusを起動したターミナルに以下のようなコマンドを入力してみましょう。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>editpin<span class="w"> </span>-pin<span class="w"> </span>clk<span class="w"> </span>-layer<span class="w"> </span>metal3<span class="w"> </span>-spreadType<span class="w"> </span>CENTER<span class="w"> </span>-side<span class="w"> </span>bottom<span class="w"> </span>-use<span class="w"> </span>CLOCK<span class="w"> </span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>editpin<span class="w"> </span>-pin<span class="w"> </span><span class="o">{</span>rs2<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>rs2<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>rs2<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w"> </span>rs2<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w"> </span>rs2<span class="o">[</span><span class="m">4</span><span class="o">]</span><span class="w"> </span>rs1<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>rs1<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>rs1<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w"> </span>rs1<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w"> </span>rs1<span class="o">[</span><span class="m">4</span><span class="o">]</span><span class="w"> </span>rd<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>rd<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>rd<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w"> </span>rd<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w"> </span>rd<span class="o">[</span><span class="m">4</span><span class="o">]}</span><span class="w"> </span>-layer<span class="w"> </span>metal3<span class="w"> </span>-spreadType<span class="w"> </span>CENTER<span class="w"> </span>-spacing<span class="w"> </span><span class="m">5</span><span class="w"> </span>-side<span class="w"> </span>left
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>editpin<span class="w"> </span>-pin<span class="w"> </span><span class="o">{</span>rs1_value<span class="o">[</span><span class="m">31</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">30</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">29</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">28</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">27</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">26</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">25</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">24</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">23</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">20</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">17</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">16</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">15</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">14</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">13</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">12</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">11</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">10</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">9</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">8</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">7</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">6</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">5</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">4</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>rs1_value<span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">31</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">30</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">29</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">28</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">27</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">26</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">25</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">24</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">23</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">20</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">17</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">16</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">15</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">14</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">13</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">12</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">11</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">10</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">9</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">8</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">7</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">6</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">5</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">4</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>rs2_value<span class="o">[</span><span class="m">0</span><span class="o">]}</span><span class="w"> </span>-layer<span class="w"> </span>metal3<span class="w"> </span>-spreadType<span class="w"> </span>CENTER<span class="w"> </span>-spacing<span class="w"> </span><span class="m">2</span><span class="w"> </span>-side<span class="w"> </span>right
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>editpin<span class="w"> </span>-pin<span class="w"> </span><span class="o">{</span>reg_we<span class="w"> </span>rd_value<span class="o">[</span><span class="m">31</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">30</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">29</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">28</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">27</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">26</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">25</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">24</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">23</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">22</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">21</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">20</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">19</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">18</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">17</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">16</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">15</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">14</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">13</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">12</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">11</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">10</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">9</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">8</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">7</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">6</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">5</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">4</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span>rd_value<span class="o">[</span><span class="m">0</span><span class="o">]}</span><span class="w"> </span>-layer<span class="w"> </span>metal3<span class="w"> </span>-spreadType<span class="w"> </span>CENTER<span class="w"> </span>-spacing<span class="w"> </span><span class="m">2</span><span class="w"> </span>-side<span class="w"> </span>top
+</span></code></pre></div>
+<p>ここではまず最初のコマンドで<code>clk</code>を下部に配置しクロックとして指定、その後、<code>rd</code>、<code>rs1</code>、<code>rs2</code>を左側に等間隔で配置、<code>rs1_value</code>、<code>rs2_value</code>を右側に等間隔で配置しています。また、<code>reg_we</code>と<code>rd_value</code>を上部に等間隔で配置しています。こうしたピン配置は<code>Edit</code>-&gt;<code>Pin Editor</code>からより詳細に指定することもできます。</p>
+<figure>
+  <img alt="" src="../img/pinlayout.png" width="800" />
+  <figcaption>I/Oピン設定後のレイアウト。</figcaption>
+</figure>
+<p>続いて、電源リングを作成します。チップ外周やマクロの外周には、幅広の電源配線を形成することが多いです。低インピーダンスかつ均一な電源供給を目指してそうするものです。</p>
+<p><code>Power</code>-&gt;<code>Power Planning</code>-&gt;<code>Add Ring</code>より、次のように指定して、<code>VDD</code>と<code>VSS</code>のリング状配線を形成します。</p>
+<figure>
+  <img alt="" src="../img/ring.png" width="600" />
+  <figcaption>電源リングの設定。</figcaption>
+</figure>
+<p>設定完了すると、電源リングが形成されます。</p>
+<figure>
+  <img alt="" src="../img/ringlayout.png" width="800" />
+  <figcaption>電源リング配線後のレイアウト。</figcaption>
+</figure>
+<p>その後、前準備として、以下のようなコマンドをターミナルに入力します。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>globalNetConnect<span class="w"> </span>VDD<span class="w"> </span>-type<span class="w"> </span>pgpin<span class="w"> </span>-pin<span class="w"> </span>vdd
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>globalNetConnect<span class="w"> </span>VSS<span class="w"> </span>-type<span class="w"> </span>pgpin<span class="w"> </span>-pin<span class="w"> </span>gnd
+</span></code></pre></div>
+<p>これによって、各スタンダードセルの電源がグローバルな電源と接続されます。</p>
+<p>続いて<code>Route</code>-&gt;<code>Special Route</code>とすることで、電源リングからスタンダードセル配置予定の各列へ電源を配線できます。</p>
+<figure>
+  <img alt="" src="../img/sroute.png" width="600" />
+  <figcaption>スタセル電源配線の設定。</figcaption>
+</figure>
+<p>上のように指定して、<code>OK</code>とすると、交互にVDDとVSS電源レールが配線されます。</p>
+<figure>
+  <img alt="" src="../img/sroutelayout.png" width="800" />
+  <figcaption>電源レール配線後のレイアウト。</figcaption>
+</figure>
+<p>ここまでの結果を保存してみましょう。<code>File</code>-&gt;<code>Save Design</code>から次のように指定してファイルを保存できます。これを<code>File</code>-&gt;<code>Restore Design</code>から呼び出すことで、保存した状態に復帰できます。なお、<code>.enc</code>という拡張子は、以前のツール名称 (Encounter) の名残です。</p>
+<figure>
+  <img alt="" src="../img/save.png" width="400" />
+  <figcaption>ファイルの保存。</figcaption>
+</figure>
+<h4 id="_6">レジスタファイルの配置配線 (配置)</h4>
+<p>次に、スタンダードセルを配置していきます。<code>Place</code>-&gt;<code>Place Standard Cell</code>として、起動したウィンドウで<code>OK</code>としてみましょう。</p>
+<figure>
+  <img alt="" src="../img/stdcelllayout.png" width="800" />
+  <figcaption>スタセル配置後のレイアウト。</figcaption>
+</figure>
+<p>右側のメニューから、<code>Cell</code>の<code>V (Visivility)</code>にチェックを付けると、スタンダードセル内部の配線も見ることができます。</p>
+<figure>
+  <img alt="" src="../img/stdcellintlayout.png" width="800" />
+  <figcaption>スタセル内部のレイアウト。</figcaption>
+</figure>
+<h4 id="cts">レジスタファイルの配置配線 (CTS・配線)</h4>
+<p>さて、ここからいよいよ配線をしていきます。まず、クロックツリー合成 (CTS) 前向けの最適化を実行します。<code>ECO</code>-&gt;<code>Optimize Design</code>から、次のような設定で<code>OK</code>します。</p>
+<figure>
+  <img alt="" src="../img/optimize.png" width="400" />
+  <figcaption>CTS前最適化。</figcaption>
+</figure>
+<p>最適化によって少し配置が変化したのがわかると思います。</p>
+<figure>
+  <img alt="" src="../img/eco.png" width="800" />
+  <figcaption>CTS前最適化後のレイアウト。</figcaption>
+</figure>
+<p>続いて、CTSを実施します。下のようなコマンドをターミナルに入力してみましょう。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>set_ccopt_property<span class="w"> </span>buffer_cells<span class="w"> </span><span class="o">{</span>CLKBUF1<span class="w"> </span>CLKBUF2<span class="w"> </span>CLKBUF3<span class="o">}</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>ccopt_design
+</span></code></pre></div>
+<p>最初のコマンドでクロックに用いるバッファセル名を指定し、その後のコマンドで合成を実行しています。</p>
+<figure>
+  <img alt="" src="../img/cts.png" width="800" />
+  <figcaption>CTS後のレイアウト。</figcaption>
+</figure>
+<p>CTSによって、クロックの経路へバッファが挿入されます。また、うまくツリー状にクロックが分配されていることは、<code>Clock</code>-&gt;<code>CCOpt Clock Tree Debugger</code>から確認することができます。</p>
+<figure>
+  <img alt="" src="../img/ct.png" width="800" />
+  <figcaption>クロックツリーの様子。</figcaption>
+</figure>
+<p>その後、CTS後向けの最適化を実行します。<code>ECO</code>-&gt;<code>Optimize Design</code>から、次のような設定で<code>OK</code>します。</p>
+<figure>
+  <img alt="" src="../img/optimizepc.png" width="400" />
+  <figcaption>CTS後最適化。</figcaption>
+</figure>
+<p>最適化によってまた配置が変化します。特にI/Oピンへ長く引き回されていた配線にセルが入って配線長が短縮されているのがわかると思います。</p>
+<figure>
+  <img alt="" src="../img/ecopclayout.png" width="800" />
+  <figcaption>CTS後のレイアウト。</figcaption>
+</figure>
+<p>続いて、スタンダードセル間の詳細配線を実施します。<code>Route</code>-&gt;<code>NanoRoute</code>-&gt;<code>Route</code>より、以下のように指定して実行します。</p>
+<figure>
+  <img alt="" src="../img/nanoroute.png" width="600" />
+  <figcaption>詳細配線の設定。</figcaption>
+</figure>
+<p>詳細配線によって、スタンダードセル間がエラーの生じないよう接続されます。</p>
+<figure>
+  <img alt="" src="../img/nanolayout.png" width="800" />
+  <figcaption>詳細配線後のレイアウト。</figcaption>
+</figure>
+<p>詳細配線後にも最適化工程があります。まず、それに先立って、遅延計算や解析の設定をしておきます。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>setDelayCalMode<span class="w"> </span>-engine<span class="w"> </span>aae<span class="w"> </span>-SIAware<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>innovus<span class="w"> </span>x&gt;<span class="w"> </span>setAnalysisMode<span class="w"> </span>-analysisType<span class="w"> </span>onChipVariation<span class="w"> </span>-cppr<span class="w"> </span>both
+</span></code></pre></div>
+<p>その後、<code>ECO</code>-&gt;<code>Optimize Design</code>から、次のような設定で<code>OK</code>します。</p>
+<figure>
+  <img alt="" src="../img/optimizepr.png" width="400" />
+  <figcaption>詳細配線後最適化。</figcaption>
+</figure>
+<p>その後、最後に空いている部分にフィラーセルと呼ばれるセルを挿入します。これは製造ルール上のエラーを防ぐもので、一般に挿入の必要があります。たとえば、NwellやPwellは多くの場合細かく分割されないようにする必要があり、スタセルが無くてもこれらが繋がるようにフィラーセルを挿入します。</p>
+<p><code>Place</code>-&gt;<code>Physical Cell</code>-&gt;<code>Add Filler</code>として、以下のように設定し、<code>OK</code>します。</p>
+<figure>
+  <img alt="" src="../img/fill.png" width="400" />
+  <figcaption>フィラー挿入設定。</figcaption>
+</figure>
+<p>何も無かった部分に細いフィラーセルが挿入されているのがわかるかと思います。</p>
+<figure>
+  <img alt="" src="../img/filllayout.png" width="800" />
+  <figcaption>フィラーセルの入ったレイアウト。</figcaption>
+</figure>
+<p>これにて、最終的なレイアウトが得られました。</p>
+<figure>
+  <img alt="" src="../img/finlayout.png" width="800" />
+  <figcaption>最終レイアウト。</figcaption>
+</figure>
+<p>検証用のコマンドとして、以下のようなものがあります。実行して、ターミナルで結果を確認してみましょう。</p>
+<ul>
+<li><code>Verify</code>-&gt;<code>Verify DRC</code>: レイアウトは製造ルールを満たしているか</li>
+<li><code>Verify</code>-&gt;<code>Verify Connectivity</code>: 想定通りの接続になっているか</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Open Question: このレイアウトには実は問題点が残っており、製造できるかかなり怪しいです、どんなところが問題でしょうか?</p>
+</div>
+<h4 id="_7">レジスタファイルの配置配線 (レイアウト出力)</h4>
+<p>さて、無事完成したレイアウトを製造のために別の場所へ送付したり、あるいは他のレイアウトと組み合わせるためには、.gds形式で出力したいです。そこで、<code>File</code>-&gt;<code>Save</code>-&gt;<code>GDS/OASIS</code>から、出力の設定をします。</p>
+<figure>
+  <img alt="" src="../img/export.png" width="400" />
+  <figcaption>出力設定。</figcaption>
+</figure>
+<p>ここで、<code>Output File</code>には、出力ファイル名を、<code>Map File</code>には、.gdsのレイヤ番号とレイヤ名の対応が記述されたmapファイル (<code>/home/resources/gscl45nm/gds2_encounter.map</code>) を、<code>Merge Files</code>には、各スタンダードセルの.gdsファイル (<code>/home/resources/gscl45nm/gds/*</code>) をそれぞれ指定します。</p>
+<p>出力されたファイルを別のアプリケーションから開いてみましょう。</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>/usr/bin/klayout<span class="w"> </span><span class="si">${</span><span class="nv">出力した</span><span class="p">.gdsファイル名</span><span class="si">}</span>
+</span></code></pre></div>
+<p>として、レイアウトを見ることができればokです。</p>
+<figure>
+  <img alt="" src="../img/klayoutreg.png" width="800" />
+  <figcaption>klayoutで見たレイアウト。</figcaption>
+</figure>
+<h4 id="_8">スクリプト化とコマンドライン実行</h4>
+<p>配置配線しようと思ったときに、今回のような手順を毎回おこなうのはかなり面倒だと思います。効率的に実行していくために、こうした手順を自動化する手段が用意されています。</p>
+<p>Innovusの操作履歴は、<code>innovus.cmd</code>というファイル名で保存されます。ここにおこなった操作がコマンドとして記録されているので、それをtclスクリプトなどにコピーして、そのスクリプトを実行するようにすればよいです。</p>
+<p>実行したいコマンドを抜粋した.tclファイルを準備し、</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>innovus<span class="w"> </span>-files<span class="w"> </span><span class="si">${</span><span class="p">.tclファイル名</span><span class="si">}</span>
+</span></code></pre></div>
+<p>とすることで、論理合成のときと同じようなかたちで、コマンドラインから配置配線を実行することができます。</p>
+<h2 id="_9"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18.13 12 1.26-1.26c.44-.44 1-.68 1.61-.74V9l-6-6H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h6v-1.87l.13-.13H5V5h7v7zM14 4.5l5.5 5.5H14zm5.13 9.33 2.04 2.04L15.04 22H13v-2.04zm3.72.36-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72"/></svg></span> 自習課題</h2>
+<p>1から自分なりのディジタル回路をRTL設計して論理合成・配置配線してみましょう。手順としては、</p>
+<ul>
+<li>ディジタル回路のRTL設計を<code>.sv</code>で記述する</li>
+<li>講義中に利用した<code>.tcl</code>を参考に、自分が設計した回路に向けた<code>.tcl</code>を作成する</li>
+<li>Design Compilerで論理合成を実施する</li>
+<li>Innovusで配置配線を実施する</li>
+</ul>
+<p>といったものになります。</p>
+<p><strong>(提出等の必要はありません。)</strong></p>
+<h2 id="_10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 3H5a2 2 0 0 0-2 2v6h4V9l4 3-4 3v-2H3v6a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-3 14h-4v-2h4zm3-4h-7v-2h7zm0-4h-7V7h7zM3 13H0v-2h3z"/></svg></span> 次回予告</h2>
+<p>本日はここまでです。次回はVLSI設計の流れを改めておさらいすると共に、プロセッサの高性能化、メモリや周辺回路、ソフトウェアといったトピックについて解説します。興味のある方はSRAMの構造やシステムソフトウェアについて復習してみてください。</p>
 
 
 
