@@ -273,6 +273,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../riscv_core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V RV32Iコア
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../rv32i/" class="md-nav__link">
         
   
@@ -1814,7 +1835,7 @@ assertを使うと良いと思います。</p>
 </span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a>
 </span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="k">always_comb</span><span class="w"> </span><span class="k">begin</span>
 </span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="k">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">op_code</span><span class="p">)</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="n">OPIMM</span><span class="p">,</span><span class="w"> </span><span class="n">LUI</span><span class="p">,</span><span class="w"> </span><span class="n">LOAD</span><span class="p">,</span><span class="w"> </span><span class="n">STORE</span><span class="p">,</span><span class="w"> </span><span class="nl">JALR:</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="n">OPIMM</span><span class="p">,</span><span class="w"> </span><span class="n">LUI</span><span class="p">,</span><span class="w"> </span><span class="n">LOAD</span><span class="p">,</span><span class="w"> </span><span class="nl">STORE:</span><span class="w"> </span><span class="k">begin</span>
 </span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">            </span><span class="n">alu_op1_sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_OP1_RS1</span><span class="p">;</span>
 </span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">            </span><span class="n">alu_op2_sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_OP2_IMM</span><span class="p">;</span>
 </span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="k">end</span>
@@ -2387,7 +2408,7 @@ assertを使うと良いと思います。</p>
 </span><span id="__span-17-80"><a id="__codelineno-17-80" name="__codelineno-17-80"></a><span class="w">    </span><span class="c1">// alu_op_sel</span>
 </span><span id="__span-17-81"><a id="__codelineno-17-81" name="__codelineno-17-81"></a><span class="w">    </span><span class="k">always_comb</span><span class="w"> </span><span class="k">begin</span>
 </span><span id="__span-17-82"><a id="__codelineno-17-82" name="__codelineno-17-82"></a><span class="w">        </span><span class="k">unique</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="n">op_code</span><span class="p">)</span>
-</span><span id="__span-17-83"><a id="__codelineno-17-83" name="__codelineno-17-83"></a><span class="w">            </span><span class="n">OPIMM</span><span class="p">,</span><span class="w"> </span><span class="n">LUI</span><span class="p">,</span><span class="w"> </span><span class="n">LOAD</span><span class="p">,</span><span class="w"> </span><span class="n">STORE</span><span class="p">,</span><span class="w"> </span><span class="nl">JALR:</span><span class="w"> </span><span class="k">begin</span>
+</span><span id="__span-17-83"><a id="__codelineno-17-83" name="__codelineno-17-83"></a><span class="w">            </span><span class="n">OPIMM</span><span class="p">,</span><span class="w"> </span><span class="n">LUI</span><span class="p">,</span><span class="w"> </span><span class="n">LOAD</span><span class="p">,</span><span class="w"> </span><span class="nl">STORE:</span><span class="w"> </span><span class="k">begin</span>
 </span><span id="__span-17-84"><a id="__codelineno-17-84" name="__codelineno-17-84"></a><span class="w">                </span><span class="n">alu_op1_sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_OP1_RS1</span><span class="p">;</span>
 </span><span id="__span-17-85"><a id="__codelineno-17-85" name="__codelineno-17-85"></a><span class="w">                </span><span class="n">alu_op2_sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ALU_OP2_IMM</span><span class="p">;</span>
 </span><span id="__span-17-86"><a id="__codelineno-17-86" name="__codelineno-17-86"></a><span class="w">            </span><span class="k">end</span>
